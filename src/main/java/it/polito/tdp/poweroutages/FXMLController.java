@@ -15,6 +15,8 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
 public class FXMLController {
+	
+	
 
     @FXML // ResourceBundle that was given to the FXMLLoader
     private ResourceBundle resources;
@@ -53,6 +55,17 @@ public class FXMLController {
     }
     
     public void setModel(Model model) {
-    	this.model = model;
+    	
+    	this.model=model; //VA MESSO SEMPRE PRIMA ALTRIMENTI DA ERRORE
+    	
+    	for(Nerc n: this.model.getNercList()) {
+    		
+    			cmbNerc.getItems().add(n);
+    			
+    	}
+    	
+    	
+    	
+    	
     }
 }
